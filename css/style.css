@@ -1,0 +1,587 @@
+
+/***************MOBILE FIRST********************/
+
+/***********Navigation ************/
+
+	img{
+
+    	width: 450px;
+    	height: 300px;
+	}
+
+
+	nav{
+
+		background-color: #ebe0eb;
+		justify-content:center;
+
+	}
+
+	.logo{
+		display:flex;
+	
+	}
+
+	.title{
+	   	background: linear-gradient(90deg,#ffcc00,#e66465, #5c00e6);
+		-webkit-background-clip:text;
+		-webkit-text-fill-color:transparent;
+		font-size: 40px;
+		padding-left:20px;
+
+	}
+
+	h1{
+	
+		color:#404040;
+		font-style: italic;
+		font-family: 'Lobster', cursive;
+		font-size:10px;	
+		padding-top:10px;
+		letter-spacing: 2px;
+	}
+/***************End navigation ********/
+
+/*******body********/
+
+
+	body{
+		margin:0;
+		padding:0;
+		box-sizing:border-box;
+		min-height: 100%;
+		position: relative;
+
+	}
+	
+	#cadre{
+
+		background-color: #f2f2f2;
+		padding:20px;
+		border-radius: 5px;
+		text-align: center;
+		font-family: 'Courgette', cursive;
+		box-shadow:  -5px 5px 5px #d9d9d9;
+		justify-content: center;	
+	 
+	}
+
+	p{
+
+		font-family: 'courgette', sans-serif;
+		font-size: 18px;
+		padding:10px;
+		text-align: center;
+
+    }
+
+
+/******footer***/
+
+	footer{
+		background-color: #ebe0eb;
+		position:fixed;
+		bottom:0;
+		height: 30px;
+		width: 100%;
+
+     }
+
+/*****PRODUCT PAGE****/
+	select{
+
+		border-color:#ff6600;
+		border-style: dashed;
+	}
+
+
+	h2{
+		text-align: center;
+		font-family: 'Lobster', cursive;
+		color:#404040;
+		font-size: 25px;
+		letter-spacing: 3px;
+	}
+
+
+
+	a {
+		text-decoration:none;
+		color:#99ff99;
+	
+	}
+
+/*prix*/
+
+	#prix{
+		display: flex;
+		justify-content: left;
+		font-weight: bold;
+		letter-spacing: 2px;
+
+	}
+
+
+	ul{
+		list-style: none;
+	}
+
+
+	.description{
+		font-family: 'Dosis', sans-serif;
+		text-align:justify;
+
+	}
+
+/*titre sur page produit*/
+
+	.titre{
+		color:#7B1FA2;
+	}
+
+	.dropdown{
+
+    	display: flex;
+    	justify-content: center;
+    	padding: 20px
+	}
+
+
+/*page panier*/ 
+
+	.cart-meuble{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.furniture{
+		width: 100px;
+		height:100px;
+	}
+
+	.quantite{
+		width:20px;
+		height:15px;
+		border-radius: 20%;
+	}
+
+	.remove{
+		display:inline-block;
+	}
+
+
+
+/*input prix -panier*/
+
+	input{
+
+		width: 50px;
+	}
+
+/***form page*/
+
+/**green button **/
+
+	#button{
+
+	 	width: 100%;
+	}
+
+/*input formulaire*/
+
+	.box{
+
+		width: 600px;
+	}
+
+/** img in basket**/
+
+	.cartpict{
+
+		width: 150px;
+		height: 90px;
+	}
+
+/***page basket**/ 
+
+/* yellow button -basket*/
+
+	.btn-warning{
+
+		width:100%;
+		height:auto;
+	}
+
+
+/*input forms*/
+	.box{
+		width:100%;
+		height:auto;
+
+	}
+
+
+	a{
+		text-decoration: none;
+	}
+
+
+	#card{
+
+		display:block;
+		margin:0px;
+		padding:0px;
+		width: 100%;
+	}
+	#cadre{
+
+		background-color: #f2f2f2;
+		margin: 20px;
+		margin-bottom: 40px;
+		padding:20px;
+		border-radius: 5px;
+		text-align: center;
+		font-family: 'Courgette', cursive;
+ 
+	}
+
+
+	img{
+		width: 100%;
+		height: auto;
+		border-radius: 5%;
+
+	}
+
+
+	.prod{
+
+		display: flex;
+		justify-content:space-between;
+		align-items: center;
+		margin: 20px;
+		padding :50px;
+		border: 2px solid  #e6e6e6;
+		border-radius: 5px;
+	}
+
+	.pict .infoPict{
+
+		padding: 30px;
+		margin:20px;
+		display: flex;
+		align-items: center;
+	}
+
+	p{
+
+		margin: 0px;
+		padding: 0px;
+		color:#404040;
+	}
+
+	h4, h3, #total{
+
+		text-align: center;
+		font-family: 'Courgette', cursive;
+		padding:20px;
+		color:#404040;
+		font-size:20px;
+	}
+
+	#button{
+
+		width: 100%;
+		margin-bottom: 60px;
+	}
+
+	.btn{
+
+		color:white;
+		width:50%;
+		height: auto;
+		margin-bottom: 60px;
+		margin-left: 100px;
+		margin-right:100px;
+
+	}
+
+	#msg{
+
+		font-family: 'Courgette', cursive;
+	}
+
+	#finalMsg{
+
+		display: block;
+		justify-content:center;
+		align-content: center;
+		margin: 50px;
+		margin-top: 50px;
+		box-shadow: 3px 3px 3px grey;
+		letter-spacing: 3px;
+
+	}
+
+
+	#resume>p{
+
+		padding: 30px;
+		font-family: 'Playfair Display', serif;
+		font-weight: bold;
+		font-size: 30px;
+	}
+
+	#result{
+    	display: flex;
+    	justify-content: center;
+		margin: 20px;
+		margin-bottom: 0px;
+		padding: 30px;
+		font-size : 40px;
+		font-family: 'Playfair Display', serif;
+
+	}
+	#option_lenses{
+
+		margin: 40px;
+		margin-left: 100px;
+		margin-right:100px;
+	}
+
+
+
+	.btn-success{
+
+		margin: 0px;
+	}
+
+	.btn-warning{
+
+		margin:0px;
+		margin-left: 100px;
+		margin-right:100px;
+	}
+
+	a{
+		text-decoration: none;
+	}
+
+
+	footer{
+		background-color: #ebe0eb;
+		position:fixed;
+		bottom:0;
+		height: 30px;
+		width: 100%;
+	
+
+	}
+
+
+/*********************TABLETS*********************/
+
+@media only screen and (min-width: 600px){
+	
+	#card{
+
+		display:block;
+		margin: 100px;
+		padding:0px;
+		width: 550px;
+		height: auto;
+
+
+  	}
+
+  	#cadre{
+
+		background-color: #f2f2f2;
+		margin: 20px;
+		margin-bottom: 40px;
+		padding:20px;
+		border-radius: 5px;
+		text-align: center;
+		font-family: 'Courgette', cursive;
+ 
+	}
+
+ 	#btn{
+		width: 300px;
+		margin: 40px;
+		margin-left: 100px;
+  		margin-right: 100px;
+
+  	}
+
+  	#option_lenses{
+
+  		margin-left: 150px;
+  		margin-right: 150px;
+  	}	
+
+
+  	.prod{
+
+		display: flex;
+		justify-content:space-around;
+		align-items: center;
+		margin: 20px;
+		padding :50px;
+		border: 2px solid  #e6e6e6;
+		border-radius: 5px;
+
+
+	}
+
+	.pict .infoPict{
+
+		padding: 30px;
+		margin:20px;
+		display: flex;
+		align-items: center;
+
+
+	}
+
+	#total{
+		text-align:right;
+		font-family: 'Courgette', cursive;
+		font-size: 20px;
+	}
+
+
+	h3{
+		font-family: 'Courgette', cursive;
+		margin-left: 150px;
+		margin-right: 150px;
+	}
+
+	h4{
+		font-family: 'Courgette', cursive;
+		margin: 20px;
+	}
+
+	.thankMsg{
+
+		margin-top: 100px;
+	}
+
+
+	#finalMsg{
+
+		display: block;
+		justify-content:center;
+		align-content: center;
+		margin: 50px;
+		margin-top: 50px;
+		box-shadow: 3px 3px 3px grey;
+		letter-spacing: 3px;
+  
+   }
+
+}
+
+/*****DESKTOP******************************************/
+
+@media only screen and (min-width: 1200px){
+
+/* index layout*/
+	#card{
+
+		display:flex;
+		margin: 100px;
+	}
+
+	img{
+
+    	width: 450px;
+    	height: 300px;
+	}
+
+
+    #liste{
+
+		display:flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin-top: 70px;
+	}
+
+	#cadre{
+
+		background-color: #f2f2f2;
+		margin: 20px;
+		margin-bottom: 40px;
+		padding:20px;
+		border-radius: 5px;
+		text-align: center;
+		font-family: 'Courgette', cursive;
+ 
+	}
+
+    /* product-page*/
+	#option_lenses{
+
+		width:100%;
+		height: auto;
+		padding: 5px;
+		margin-left: 100px;
+		margin-right: 100px;
+	}
+
+    /***page basket**/ 
+
+	/* yellow button -basket*/
+
+	.btn-warning{
+
+		width:100%;
+		height:auto;
+	}
+
+
+
+	#pictInfo{
+
+		margin:20px;
+	}
+
+	#pictInfo>p{
+		margin-top: 70px;
+	}
+
+	#btn{
+		width: 300px;
+		margin: 40px;
+
+	}	
+
+	h4{
+		font-family: 'Courgette', cursive;
+
+	}
+
+	.thankMsg{
+
+		margin-top: 100px;
+	}
+
+
+	#finalMsg{
+
+		display: block;
+		justify-content:center;
+		align-content: center;
+		margin: 50px;
+		margin-top: 50px;
+		box-shadow: 3px 3px 3px grey;
+		letter-spacing: 3px;
+  
+
+
+	}
+
+
+}
+
