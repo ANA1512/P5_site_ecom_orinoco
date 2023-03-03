@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../../JWDP5"
+		},
+		{
+			"path": "../backend/JWDP5"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "orinoco_p5"
+	}
+}
