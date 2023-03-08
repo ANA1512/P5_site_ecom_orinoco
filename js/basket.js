@@ -47,8 +47,6 @@ function addQuantity(obj) {
        editedBasket.push(obj);
    }
 
-
-
 };
 
 
@@ -67,6 +65,7 @@ function addQuantity(obj) {
      console.log(editedBasket);
      localStorage.setItem('data', JSON.stringify(list));
      location.reload();
+
 
 
  };
@@ -115,32 +114,34 @@ function display(){
 
 let test= document.getElementById("quantite").value; 
 
-//console.log (test.parentElement);
+console.log (test);
 
 
 
 
  /****EMPTY BASKET ( editedbasket et localStorage)*******/
 
+
+    
 if(editedBasket.length==0 && localBasket.length==0 ){
     
     
-    let itemsDisplay= document.getElementById("items");
-    let panierVide = document.createElement("p");
-    panierVide.innerHTML = "VOTRE PANIER EST VIDE"; 
-    itemsDisplay.appendChild(panierVide);
-    panierVide.style.color="#ff33cc";
-    console.log( "Votre panier est vide");
+  let itemsDisplay= document.getElementById("panier");
+  let panierVide = document.createElement("p");
+   panierVide.innerHTML = "VOTRE PANIER EST VIDE"; 
+   itemsDisplay.appendChild(panierVide);
+   panierVide.style.color="#ff33cc";
+   console.log( "Votre panier est vide");
 
-    let removeForm= document.getElementById("container");
-    let titleForm= document.getElementById("formulaire");
-    titleForm.style.display="none";
-    removeForm.style.display="none";
-    localStorage.clear();
-    
- };
+  let removeForm= document.getElementById("container");
+  let titleForm= document.getElementById("formulaire");
+  titleForm.style.display="none";
+  removeForm.style.display="none";
+   localStorage.clear();
+  
+};
 
-
+  
 
 /*************************FORMS********************************************************/
 
@@ -222,12 +223,12 @@ function checkMail(){
 
          if(erreur){
           e.preventDefault();
-          document.getElementById("erreur").innerHTML = "your forms sucks buddy get it together !";
+          document.getElementById("erreur").innerHTML = "your form sucks buddy get it together !";
           console.log(' form INCORRECT','form not ok')
          }else{
 
-          console.log('form CORRECT', "god job");
-          document.getElementById("erreur").innerHTML = "your forms it's better !"
+          console.log('form CORRECT', "good job");
+          document.getElementById("erreur").innerHTML = "your form it's better !"
           buttonForm.style.display="block";
          }
      };
@@ -252,7 +253,7 @@ function checkMail(){
       productSelected.push(editedBasket[i]._id);
       }
 
-      console.log(productSelected);
+      console.log('productSel',productSelected);
 
 // Constructor pour récupérer les infos contact et produits du formulaire
       order={
@@ -268,9 +269,11 @@ function checkMail(){
             products: productSelected
 
         }
+        
+        localStorage.setItem("infoProduit", JSON.stringify(order));
+        console.log('infoContact nom et id', order);
        
-         console.log('infoContact',order);
-      
+  
 /****************ENVOI DU FORMULAIRE A L API*************************/
   
 
@@ -286,18 +289,25 @@ function checkMail(){
 
        .then(response=> response.json())
         //save info and orderId create in localStorage
-       .then(json=> localStorage.setItem('infoProduit', JSON.stringify(json)));
-
+        //.then(json=> localStorage.setItem('infoProduit', JSON.stringify(json)));
+          .then((data) =>{
+         
+          console.log(data)
+          localStorage.setItem("orderId", JSON.stringify(data.orderId)) ; 
+         
+         })
+        
        // if error request invalid
        if(erreur){
 
-          console.log( 'Requête non autorisé:',"Votre panier est INVALIDE");
+          console.log('Requête non autorisé:',"Votre panier est INVALIDE");
 
       //if no error request valid
        }else{
          console.log( 'Requête autorisé:',"Votre panier est VALIDE")
-          alert( "Veuillez confirmer votre commande en cliquant sur ok" ,
-                 document.location.href ="confirmation_page.html");
+       
+            alert( "Veuillez confirmer votre commande en cliquant sur ok" ,
+             document.location.href ="confirmation_page.html" );
        }
 
       
@@ -309,6 +319,7 @@ function checkMail(){
 
 
 
+    
 
 
 
@@ -318,3 +329,6 @@ function checkMail(){
 
 
 
+
+
+   
