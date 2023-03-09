@@ -112,34 +112,33 @@ function display(){
 
 /*  ADD quantity for one product*/
 
-let test= document.getElementById("quantite").value; 
+// let test= document.getElementById("quantite").value; 
 
-console.log (test);
-
-
+// console.log (test);
 
 
  /****EMPTY BASKET ( editedbasket et localStorage)*******/
 
 
     
-if(editedBasket.length==0 && localBasket.length==0 ){
+// if(localBasket.length== 1){
     
     
-  let itemsDisplay= document.getElementById("panier");
-  let panierVide = document.createElement("p");
-   panierVide.innerHTML = "VOTRE PANIER EST VIDE"; 
-   itemsDisplay.appendChild(panierVide);
-   panierVide.style.color="#ff33cc";
-   console.log( "Votre panier est vide");
+  // let itemsDisplay= document.getElementById("panier");
+  // let panierVide = document.createElement("p");
+  //  panierVide.innerHTML = "VOTRE PANIER EST VIDE"; 
+  //  itemsDisplay.appendChild(panierVide);
+  //  panierVide.style.color="#ff33cc";
+  //  console.log( "Votre panier est vide");
 
-  let removeForm= document.getElementById("container");
-  let titleForm= document.getElementById("formulaire");
-  titleForm.style.display="none";
-  removeForm.style.display="none";
-   localStorage.clear();
-  
-};
+  // let removeForm= document.getElementById("container");
+  // let titleForm= document.getElementById("formulaire");
+  // titleForm.style.display="none";
+  // removeForm.style.display="none";
+  //  localStorage.clear();
+
+
+  //};
 
   
 
@@ -294,6 +293,8 @@ function checkMail(){
          
           console.log(data)
           localStorage.setItem("orderId", JSON.stringify(data.orderId)) ; 
+          alert( "Veuillez confirmer votre commande en cliquant sur ok" ,
+          document.location.href ="confirmation_page.html" );
          
          })
         
@@ -306,8 +307,7 @@ function checkMail(){
        }else{
          console.log( 'Requête autorisé:',"Votre panier est VALIDE")
        
-            alert( "Veuillez confirmer votre commande en cliquant sur ok" ,
-             document.location.href ="confirmation_page.html" );
+          
        }
 
       
