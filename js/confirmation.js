@@ -15,14 +15,13 @@ let somme=0 ;
 
 //Thank you message 
 
-	let{contact,products,orderId}= JSON.parse(localStorage.getItem("infoProduit"));
-
-
+  console.log('orderID', JSON.parse(localStorage.getItem("orderId")))
+  
 	resume.innerHTML =`
      
-    <div class="thankMsg">
+    <div class="MerciMsg">
  	<p>MERCI POUR VOTRE COMMANDE</p>
- 	<p>Votre numéro de commande est ${orderId}</p>
+ 	<p>Votre numéro de commande est ${JSON.parse(localStorage.getItem("orderId"))}</p>
     </div>
 
      `
@@ -32,19 +31,14 @@ productsInLocal.forEach((items,index)=>{
 
 	somme +=items.price;
 	sum.innerHTML=`
-
       <p>Le total de vos achats est de ${somme +" "+"€"}</p>
 	
-
 	`
-
-
 });
 
 /***********************************************/
-console.log('orderId',respInfoServer.orderId);
-console.log('Products',respInfoServer.products);
-console.log('infoContact',respInfoServer.contact);
+
+
 
 
 
