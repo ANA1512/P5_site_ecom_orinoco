@@ -288,7 +288,7 @@ function checkMail(){
 
        .then(response=> response.json())
         //save info and orderId create in localStorage
-        //.then(json=> localStorage.setItem('infoProduit', JSON.stringify(json)));
+        
           .then((data) =>{
          
           console.log(data)
