@@ -4,6 +4,7 @@ let sum = document.getElementById("result");
 let resume = document.getElementById("resume");
 let productsInLocal =JSON.parse(localStorage.getItem("data"));
 let respInfoServer =JSON.parse(localStorage.getItem("infoProduit"));
+let buttonHome = document.getElementById("button_return");
 let somme=0 ; 
 
 /*************STRUCTURE PAGE **********************/
@@ -19,10 +20,19 @@ productsInLocal.forEach((items,index)=>{
 	somme +=items.price;
 	sum.innerHTML=`
       <p>Le total de vos achats est de ${somme +" "+"€"}</p>
+	  
 	`
 });
 
+/*****************RETURN HOME***************************** */
 
+// button return home 
+
+buttonHome.addEventListener("click", function(){
+
+	localStorage.clear();
+	document.location.href ="index.html";
+});
 
 
 
