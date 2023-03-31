@@ -279,6 +279,12 @@
 		font-family: 'Montserrat', sans-serif;
 	}
 
+	#button_return{
+
+       margin-left : 120px;
+	   margin-right: 120px;
+	}
+
 
 
 /*******************************TABLETS*****************************************************************/
@@ -395,6 +401,13 @@
 		letter-spacing: 3px;
   
    }
+
+   #button_return{
+
+       margin-left : 350px;
+	   margin-right : 250px;
+	 
+	}
 
 }
 
@@ -523,5 +536,10 @@
 		letter-spacing: 3px;
 	}
 
-}
+    #button_return{
 
+		margin-left : 800px;
+		margin-right: 800px;
+	}
+
+}
