@@ -314,13 +314,11 @@
 
 /*******product page *******/
 
-
 	#option_lenses{
 
   		margin-left: 100px;
   		margin-right: 100px;
   	}
-
 
   	.prod{
 
@@ -339,8 +337,6 @@
 		width: 250px;
 		padding: 10px;
 		margin:20px;
-		
-
 	}
 
 	.infoPict {
@@ -349,13 +345,11 @@
 		display:block;
 		justify-content : space-around;
 		align-items: stretch;
-
 	}
 
 	#supprimer{
         width: 17px;
 		height: auto;
-
 	}
 
 	.infoPict >p{
