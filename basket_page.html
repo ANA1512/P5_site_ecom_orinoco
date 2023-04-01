@@ -14,6 +14,8 @@
 	<script src="https://kit.fontawesome.com/f1651cef10.js" crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@0,400;1,200&family=Roboto&display=swap" rel="stylesheet"> 
+
+	
 </head>
 <body>
 <!-- Navigation Part -->
@@ -23,25 +25,26 @@
 		<div class="title">
 			<i class="fas fa-shopping-cart"></i>
 		</div>
-		<div>
-			<a href= index.html>
-				<h1>Orinoco</h1>
-			</a>
-		</div>			
- 	</div>
+		<a href= index.html>
+			<h1>Orinoco</h1>
+		</a>
+		</div>
+	<div>			
+ </div>
 </nav>
 </header>
 <!--End Navigation Part-->
 <div id="panier"></div>
-	<h4> Voici vos articles</h4>
+<h4> Voici vos articles</h4>
 <div class="container">
-	<span id="pv">Votre panier est vide</span>
+<span id="pv">Votre panier est vide</span>
 <div class="row">
 <div class="col">
 <div class="cart-meuble">
+		
 <!-- Products table--> 
 	<div class="table-responsive">
-	<div id = "display"></div>
+		<div id = "display"></div>
 		<table class="table">
 			<thead>
 				<tr>
@@ -50,47 +53,56 @@
 					</div>					
 				</tr>
 			</thead>
-			<tbody id="items"></tbody>
+			<tbody id="items">
+			</tbody>
 		</table>
 <!--Products table end -->   			
-    <a href="index.html">
+		<a href="index.html">
 		<button class="btn btn-warning">Continuer mes achats</button></a>
 		<br>
 		<br>
-	<div id="card"></div>
-<!--formulaire-------------->
-	<div  id="formulaire"></div>
-	 	<div id="container">
+		<div  id="card"></div>
+		<!--formulaire-->
+		<div  id="formulaire"></div>
+		<div id="container">
 			<div class= "row justify-content-center">
 				<div class="col-10">
-					<form method="POST" id= "inscription" name="inscription" id="inscription" action="">
-						<p>Nom</p>
-						<input type="text" name="nom" id="nom" class="box"  onkeyup="checkCivil()">				
-						<br>
-						<br>
-						<p>Prénom</p>
-						<input type="text" name="pseudo" id="prenom" class="box" onkeyup="checkCivil()" >
-						<br>
-						<br>
-						<p>Rue</p>
-						<input type="text" name="rue"  id="rue" class="box" onkeyup="checkStreet()" >
-						<p class="box">Ville</p>
-						<input type="text" name="ville"  id="ville" class="box"  onkeyup="checkCivil()" >
-						<br>
-						<br>
-						<p>Adresse mail</p>
-						<input type="mail" name="mail"  id="mail" class="box" onkeyup="checkMail()">
-						<p id="msgMail"></p>
-						<br>
-						<button type="submit" value="ENVOYER" class="btn btn-primary" id="button_confirm">Confirmation des achats</button>
-						<p id="erreur"></p>
-					</form>
-					
-				</div>
-	   	    <footer>
-			</footer>
+
+				<form method="POST" id= "inscription" name="inscription" id="inscription" action="">
+			<!--LastName -->
+					<p>Nom</p>
+					<input type="text" name="nom" id="nom" class="box"  onkeyup="checkName()">				
+					<br>
+					<br>
+			<!--FirstName -->
+					<p>Prénom</p>
+					<input type="text" name="pseudo" id="prenom" class="box" onkeyup="checkFirstName()" >
+					<br>
+					<br>
+			<!-- Adress-->
+					<p>Rue</p>
+					<input type="text" name="rue"  id="rue" class="box" onkeyup="checkStreet()" >
+					<p class="box">Ville</p>
+					<input type="text" name="ville"  id="ville" class="box"  onkeyup="checkCivil()" >
+					<br>
+					<br>
+			<!--Mail adress-->
+					<p>Adresse mail</p>
+					<input type="mail" name="mail"  id="mail" class="box" onkeyup="checkMail()">
+			<!--Error message-->
+					<p id="msgMail"></p>
+					<br>
+			<!-- Button -->
+				<button type="submit" value="ENVOYER" class="btn btn-primary" id="button">Confirmation des achats</button>
+			<!--Error message-->
+				<p id="erreur"></p>
+			</form>
 		</div>
-	</div>
+<footer>	
+</footer>
+</div>
+</div>		
 <script src="./js/basket.js"></script>
+
 </body>
 </html>
