@@ -21,15 +21,17 @@
 <!-- Navigation Part -->
 <header>
 <nav class="nav navbar-expand-lg navbar-light">
-	<div class="logo">
-		<div class="title">
-			<i class="fas fa-shopping-cart"></i>
-		</div>
-		<a href= index.html>
-			<h1>Orinoco</h1>
-		</a>
-		</div>
-	<div>			
+
+		<div class="logo">
+			<div class="title">
+				<i class="fas fa-shopping-cart"></i>
+			</div>
+			<a href= index.html>
+				<h1>Orinoco</h1>
+			</a>
+			</div>
+		<div>
+  			
  </div>
 </nav>
 </header>
@@ -71,21 +73,25 @@
 				<form method="POST" id= "inscription" name="inscription" id="inscription" action="">
 			<!--LastName -->
 					<p>Nom</p>
-					<input type="text" name="nom" id="nom" class="box"  onkeyup="checkName()">				
-					<br>
+					<input type="text" name="nom" id="nom" class="box"  onkeyup="checkName()">
+					<p id="msgName"></p>				
 					<br>
 			<!--FirstName -->
 					<p>Prénom</p>
 					<input type="text" name="pseudo" id="prenom" class="box" onkeyup="checkFirstName()" >
-					<br>
+					<p id="msgPrenom"></p>
 					<br>
 			<!-- Adress-->
 					<p>Rue</p>
 					<input type="text" name="rue"  id="rue" class="box" onkeyup="checkStreet()" >
+					<p id="msgRue"></p>
+					<br>
+
 					<p class="box">Ville</p>
 					<input type="text" name="ville"  id="ville" class="box"  onkeyup="checkCivil()" >
+					<p id="msgVille"></p>
 					<br>
-					<br>
+					
 			<!--Mail adress-->
 					<p>Adresse mail</p>
 					<input type="mail" name="mail"  id="mail" class="box" onkeyup="checkMail()">
