@@ -10,7 +10,7 @@
 
 	nav{
 		background-color: #ebe0eb;
-		justify-content:center;
+		justify-content:space-between;
 	}
 
 	.logo{
@@ -36,6 +36,14 @@
 
 	a>h1{
 		text-decoration:underline #ebe0eb;
+	}
+
+	.fa-basket-shopping{
+		color:#404040;
+	}
+
+	.panier{
+		align-self:center; 
 	}
 /***************End navigation ********/
 
@@ -233,8 +241,6 @@
 
 /*******FORM PAGE**********/ 
 
-
-
     .btn-primary{
       width: 100%;
 	  margin-bottom: 60px;
@@ -409,18 +415,27 @@
 
 @media only screen and (min-width: 1200px){
 
+ /* navigation*/
+
+ .nav.navbar-expand-lg.navbar-light{
+	justify-content: space-between;
+	
+ }
+
+ .panier{
+		align-self:center; 
+		margin-right: 50px;
+	}
+
 /* index layout*/
 	#card{
-		display:flex;
-		
+		display:flex;		
 	}
 
 	img{
-
     	width: 450px;
     	height: 300px;
 	}
-
 
     #liste{
 
