@@ -1,5 +1,4 @@
 /***********PRODUCT PAGE **********************/
-
 // Get Id product
 idCameras= location.search;
 const urlSearchParams = new URLSearchParams(idCameras); 
@@ -38,11 +37,10 @@ apiUrl.then(async(responseData)=>{
                      
 /*Redirect button to basket page*/ 
 /*Add  and save product basket into localStorage*/
-      
-let optionChoice = document.getElementById("mySelect").value ;
+     
 btn.disabled=true;
 let button=btn.addEventListener("click", save);
-
+let optionChoice = document.getElementById("mySelect").value ;
 function save(){
     if(optionChoice==="Sélectionner un objectif"){
         btn.disabled=false;                                
