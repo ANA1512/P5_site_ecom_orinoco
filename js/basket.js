@@ -39,8 +39,6 @@ function suppression(id){
       return item._id != id;
     });
      localBasket=list;
-     console.log(localBasket);
-     console.log(editedBasket);
      localStorage.setItem('data', JSON.stringify(list));
      location.reload();
  };
@@ -100,12 +98,17 @@ let inscription = document.getElementById("inscription");
 let msgMail= document.getElementById("msgMail");
 let msgConfir= document.getElementById("msgConfir");
 let errorFormat = document.getElementById("erreur");
+let msgName = document.getElementById("msgName");
+let msgPrenom = document.getElementById("msgPrenom");
+let msgRue = document.getElementById("msgRue");
+let msgVille = document.getElementById("msgVille");
+
 
 /********* REGEXP *******/
 // validation mail
 const emailRegExp ='^[ a-zA-Z0-9.-_]+[@]{1}[a-zA-Z0-9.-_]+[.]{1}[a-z]{2,10}$';
 // nom prenom ville 
-const civilId ='^[a-zA-Z]{3,30}$';
+const civilId ='^[a-zA-Z]{1,30}$';
 // rue 
 const streetBuyer = '^[a-zA-Z0-9]';
 
@@ -139,19 +142,26 @@ function checkMail(){
 /************** INPUT CITY **************************** */
 function checkCivil() {
     if(myTown.value.match(civilId)){
-      console.log("****** format ville valide ******");
-      buttonForm.style.visibility="visible"; 
+      buttonForm.style.visibility="visible";
+      msgVille.textContent="le format ville est correct";
+      msgVille.style.color="lightgreen"; 
     }else{
       buttonForm.style.visibility="hidden";
+      msgVille.textContent="Le format nom est incorrect";
+      msgVille.style.color="red";
   }
 };
 //-----------INPUT NAME --------------------------
 function checkName(){
    if(myName.value.match(civilId)){
-     console.log("****** format nom valide ******");
+     //console.log("****** format nom valide ******");
      buttonForm.style.visibility="visible";
+     msgName.textContent="le format nom est correct";
+     msgName.style.color="lightgreen";
    }else{
     buttonForm.style.visibility="hidden";
+     msgName.textContent="Le format nom est incorrect";
+     msgName.style.color="red";
     return
    }
 };
@@ -159,18 +169,25 @@ function checkName(){
 function checkFirstName(){
   if(myFirstName.value.match(civilId)){
     buttonForm.style.visibility="visible";
+    msgPrenom.textContent="Votre prénom est valide";
+    msgPrenom.style.color="lightgreen";
   }else{
    buttonForm.style.visibility="hidden";
+   msgPrenom.textContent="Votre prénom est invalide";
+   msgPrenom.style.color="red";
    return
   }
 };
 //-----------INPUT STREET --------------------
 function checkStreet(){
   if(myStreet.value.match(streetBuyer)) { 
-    console.log("****** format rue valide ******");
     buttonForm.style.visibility="visible";
+    msgRue.textContent="Le format est valide";
+    msgRue.style.color="lightgreen";
   }else{
     buttonForm.style.visibility="hidden";
+    msgRue.textContent="Le format est invalide";
+    msgRue.style.color="red";
     return
   }
 };
